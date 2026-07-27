@@ -1,107 +1,58 @@
 import Link from "next/link"
-import { ArrowRight, Target, Eye, Heart, Zap, Users, TrendingUp, Award, CheckCircle } from "lucide-react"
+import { ArrowRight, Calendar, Clock, User } from "lucide-react"
 
-const coreValues = [
+const blogPosts = [
   {
-    icon: Zap,
-    title: "Innovation",
-    description: "We leverage cutting-edge technology to solve complex business challenges.",
+    title: "How AI is Transforming Small Business Marketing",
+    excerpt: "Discover how artificial intelligence is revolutionizing the way small businesses approach marketing and customer engagement.",
+    date: "January 15, 2026",
+    readTime: "5 min read",
+    author: "KAALAMITHRA Team",
+    category: "AI & Automation",
   },
   {
-    icon: Target,
-    title: "Integrity",
-    description: "Transparent, honest partnerships built on trust and accountability.",
+    title: "The Complete Guide to CRM Implementation",
+    excerpt: "Learn everything you need to know about implementing a CRM system that drives sales and improves customer relationships.",
+    date: "January 10, 2026",
+    readTime: "8 min read",
+    author: "KAALAMITHRA Team",
+    category: "CRM",
   },
   {
-    icon: Heart,
-    title: "Customer Success",
-    description: "Your growth is our success. We're committed to your long-term achievements.",
+    title: "Top Digital Marketing Trends for 2026",
+    excerpt: "Stay ahead of the curve with our comprehensive overview of the most important digital marketing trends shaping 2026.",
+    date: "January 5, 2026",
+    readTime: "6 min read",
+    author: "KAALAMITHRA Team",
+    category: "Marketing",
   },
   {
-    icon: TrendingUp,
-    title: "Continuous Improvement",
-    description: "Always learning, always evolving to deliver better results.",
+    title: "Automating Your Sales Funnel for Maximum Conversions",
+    excerpt: "Learn how to build and automate a sales funnel that converts leads into customers on autopilot.",
+    date: "December 28, 2025",
+    readTime: "7 min read",
+    author: "KAALAMITHRA Team",
+    category: "Sales Automation",
   },
   {
-    icon: Award,
-    title: "Data-Driven Decisions",
-    description: "Every strategy backed by data, analytics, and measurable insights.",
+    title: "Why Your Business Needs a Custom Software Solution",
+    excerpt: "Explore the benefits of custom software development versus off-the-shelf solutions for your business.",
+    date: "December 20, 2025",
+    readTime: "6 min read",
+    author: "KAALAMITHRA Team",
+    category: "Technology",
   },
   {
-    icon: Users,
-    title: "Long-Term Partnerships",
-    description: "Building lasting relationships that grow and evolve together.",
+    title: "Cloud Migration: A Step-by-Step Guide",
+    excerpt: "A practical guide to migrating your business infrastructure to the cloud securely and efficiently.",
+    date: "December 15, 2025",
+    readTime: "10 min read",
+    author: "KAALAMITHRA Team",
+    category: "Cloud & DevOps",
   },
 ]
 
-const processSteps = [
-  {
-    step: 1,
-    title: "Discover",
-    description: "Understand your business goals, challenges, and opportunities.",
-  },
-  {
-    step: 2,
-    title: "Strategy",
-    description: "Develop a customized roadmap for growth.",
-  },
-  {
-    step: 3,
-    title: "Build",
-    description: "Design and implement technology and marketing systems.",
-  },
-  {
-    step: 4,
-    title: "Launch",
-    description: "Deploy campaigns, software, and automation solutions.",
-  },
-  {
-    step: 5,
-    title: "Optimize",
-    description: "Continuously improve performance through data analysis.",
-  },
-  {
-    step: 6,
-    title: "Scale",
-    description: "Expand growth with advanced automation and optimization.",
-  },
-]
-
-const statistics = [
-  { value: "100+", label: "Projects Completed" },
-  { value: "50+", label: "Clients Served" },
-  { value: "100K+", label: "Leads Generated" },
-  { value: "10M+", label: "Reach Generated" },
-]
-
-const whyChooseUs = [
-  {
-    title: "AI-First Approach",
-    description: "We leverage AI to increase efficiency, productivity, and business growth.",
-  },
-  {
-    title: "End-to-End Solutions",
-    description: "From strategy to implementation, we manage the complete transformation journey.",
-  },
-  {
-    title: "Experienced Team",
-    description: "Experts in Marketing, Technology, Automation, CRM, and Growth.",
-  },
-  {
-    title: "Fast Delivery",
-    description: "Agile processes ensure quicker implementation and faster results.",
-  },
-  {
-    title: "Scalable Systems",
-    description: "Solutions designed to grow with your business.",
-  },
-  {
-    title: "Dedicated Support",
-    description: "Continuous support and optimization for long-term success.",
-  },
-]
-
-export default function AboutPage() {
+export default function BlogPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -110,169 +61,71 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              About <span className="animated-gradient-text">KAALAMITHRA</span>
+              Our <span className="text-primary">Blog</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Your Growth Partner in the Digital Age
-            </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              KAALAMITHRA is an AI-first technology and growth company helping businesses scale through Automation, Marketing, Software Development, CRM Solutions, and Data Intelligence. We combine innovation, strategy, and technology to solve complex business challenges and create measurable growth.
+              Insights, strategies, and guides to help your business grow with technology
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-24 bg-card border-y border-border">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <div className="p-8 rounded-xl bg-background border border-border">
-              <Target className="w-12 h-12 text-primary mb-6" />
-              <h2 className="text-2xl font-bold text-foreground mb-4">Our Mission</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                To empower businesses with intelligent technology and growth systems that drive sustainable success.
-              </p>
-            </div>
-            <div className="p-8 rounded-xl bg-background border border-border">
-              <Eye className="w-12 h-12 text-primary mb-6" />
-              <h2 className="text-2xl font-bold text-foreground mb-4">Our Vision</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                To become a trusted global partner for AI-powered business transformation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics */}
+      {/* Blog Posts */}
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {statistics.map((stat) => (
-              <div key={stat.label} className="text-center p-6 rounded-xl bg-card border border-border">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className="py-24 bg-card border-y border-border">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Core <span className="text-primary">Values</span>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              The principles that guide everything we do
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {coreValues.map((value) => (
-              <div
-                key={value.title}
-                className="p-6 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-300"
+            {blogPosts.map((post, index) => (
+              <article
+                key={index}
+                className="group p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
               >
-                <div className="p-3 bg-primary/10 rounded-lg w-fit mb-4">
-                  <value.icon className="w-6 h-6 text-primary" />
+                <div className="mb-4">
+                  <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    {post.category}
+                  </span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{value.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Businesses <span className="text-primary">Trust Us</span>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              What sets KAALAMITHRA apart from the competition
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {whyChooseUs.map((item) => (
-              <div
-                key={item.title}
-                className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
-              >
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                  </div>
+                <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {post.excerpt}
+                </p>
+                <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
+                  <span className="flex items-center gap-1">
+                    <Calendar className="w-3 h-3" />
+                    {post.date}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    {post.readTime}
+                  </span>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Process */}
-      <section className="py-24 bg-card border-y border-border">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our <span className="text-primary">Process</span>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A proven methodology for delivering results
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {processSteps.map((step) => (
-              <div
-                key={step.step}
-                className="p-6 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <span className="text-xl font-bold text-primary">{step.step}</span>
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
-              </div>
+                <span className="inline-flex items-center text-primary text-sm font-medium">
+                  Read more <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
-        <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+      <section className="py-24 bg-card border-y border-border">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to Transform Your Business?
+              Want More Insights?
             </h2>
             <p className="text-muted-foreground text-lg mb-10">
-              Let's build something extraordinary together. Book a free consultation and discover how KAALAMITHRA can help you achieve your goals.
+              Subscribe to our newsletter and get the latest strategies delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/consultation"
-                className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-4 text-lg rounded-lg neon-glow transition-all duration-300"
-              >
-                Book Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center border border-border hover:bg-accent text-foreground font-semibold px-10 py-4 text-lg rounded-lg transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-4 text-lg rounded-lg transition-all duration-300"
+            >
+              Subscribe Now
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </section>
